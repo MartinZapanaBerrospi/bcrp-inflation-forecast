@@ -1,0 +1,17 @@
+variable,valor_actual,promedio_historico,aporte_pp,etiqueta
+trigo_var_12m,48.73142,6.65391,0.86637,"Trigo, variación 12 m"
+inflacion_6m_anualizada,6.57840,3.08495,0.40756,Inflación 6 meses (anualizada)
+tipo_cambio_var_12m,-5.06181,0.46597,-0.33794,"Tipo de cambio, variación 12 m"
+estacional,4.18925,3.02094,-0.20442,Estacionalidad de los próximos meses
+transables_12m,2.27497,2.93229,-0.13803,Inflación transables 12 m
+no_transables_12m,5.38093,3.33844,-0.09525,Inflación no transables 12 m
+sae_3m_anualizada,1.53523,2.45517,0.08245,Sin alimentos y energía 3 m (anualizada)
+tasa_referencia,4.25000,3.83829,-0.08109,Tasa de referencia
+expectativa_12m,3.05000,2.78660,-0.07343,Expectativa de inflación (encuesta)
+inflacion_3m_anualizada,2.32203,3.06919,-0.07140,Inflación 3 meses (anualizada)
+inflacion_12m,4.43781,3.18277,0.06415,Inflación 12 meses
+petroleo_var_12m,29.34332,10.20728,0.03499,"Petróleo WTI, variación 12 m"
+mayorista_12m,3.91840,2.67267,-0.01605,Precios al por mayor 12 m
+sae_12m,4.49924,2.46519,0.01446,Inflación sin alimentos y energía 12 m
+tasa_var_12m_pp,-0.25000,0.10615,-0.01054,Cambio de la tasa de referencia 12 m
+mes_calendario,,,0.00958,Mes del año del pronóstico
