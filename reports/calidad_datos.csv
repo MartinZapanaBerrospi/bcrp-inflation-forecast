@@ -1,0 +1,9 @@
+regla,detalle,cumple,valor
+Q1,"Meses consecutivos, sin huecos",True,284
+Q2,Sin vacíos en las series (salvo tasa de referencia antes de sep-2003),True,0
+Q3,La tasa de referencia empieza en sep-2003 (inicio del instrumento),True,2003-09
+Q4,Inflación 12 m publicada = calculada desde el índice (pp),True,0.0
+Q5,Variación mensual publicada = calculada desde el índice (pp),True,0.0
+Q6,Inflación 12 m = composición de las 12 variaciones mensuales (pp),True,0.0
+Q7,Inflación sin alimentos y energía 12 m = composición de sus variaciones mensuales (pp),True,0.0
+Q8,"Precios, tipo de cambio e índice estrictamente positivos",True,
