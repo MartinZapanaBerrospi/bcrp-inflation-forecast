@@ -35,7 +35,15 @@ flowchart LR
     G --> H["Streamlit Cloud<br/>redespliega"]
 ```
 
-- **Sin mes nuevo no se reentrena.** Si el panel no cambió, el flujo termina sin commit.
+- **Sin mes nuevo no se reentrena.** El flujo compara el último mes descargado con el último mes
+  publicado (`data/processed/resumen.json`). Si son iguales, termina sin commit.
+- **Mismo archivo en Windows y en Linux.** El pipeline escribe todo con finales de línea LF y
+  `.gitattributes` normaliza el repositorio. En la primera ejecución de prueba, la detección
+  comparaba archivos y un cambio de CRLF a LF se tomó como dato nuevo: por eso ahora se comparan
+  meses.
+- **Resultados reproducibles, con matices.** Recalcular en Linux cambió decimales del SARIMA desde
+  la cuarta cifra (error medio 0,8964 → 0,8970 pp), por diferencias del optimizador entre
+  plataformas. Las cifras redondeadas de la documentación no cambian.
 - **Cualquier falla detiene la publicación.** Una regla de calidad incumplida o una prueba que
   falla cortan el flujo antes del commit, y la app sigue mostrando el último pronóstico válido.
 - **La app se actualiza sola.** Streamlit Community Cloud redespliega al detectar el commit en

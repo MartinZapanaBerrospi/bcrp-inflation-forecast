@@ -190,9 +190,9 @@ def main() -> None:
 
     for name, df in [("metricas_horizonte", hm), ("metricas_periodo", pm), ("diebold_mariano", dm),
                      ("cobertura", cov), ("intervalos", intervals)]:
-        df.to_csv(BT / f"{name}.csv", index=False, float_format="%.5f")
-    fc.to_csv(config.PROCESSED / "pronostico.csv", index=False, float_format="%.5f")
-    contrib.to_csv(config.PROCESSED / "contribuciones.csv", index=False, float_format="%.5f")
+        df.to_csv(BT / f"{name}.csv", index=False, float_format="%.5f", lineterminator="\n")
+    fc.to_csv(config.PROCESSED / "pronostico.csv", index=False, float_format="%.5f", lineterminator="\n")
+    contrib.to_csv(config.PROCESSED / "contribuciones.csv", index=False, float_format="%.5f", lineterminator="\n")
 
     avg = hm[hm["modelo"].isin(CANDIDATES)].groupby("modelo")["mae"].mean().sort_values()
     best = avg.index[0]
@@ -213,7 +213,8 @@ def main() -> None:
         "ridge_base_12m": contrib.attrs["base"],
         "ridge_alpha_12m": contrib.attrs["alpha"],
     }
-    (config.PROCESSED / "resumen.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    (config.PROCESSED / "resumen.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n",
+                                                  encoding="utf-8", newline="\n")
 
     with pd.option_context("display.width", 200, "display.max_columns", 20):
         print(hm.pivot(index="h", columns="modelo", values="mae").round(3))

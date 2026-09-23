@@ -40,7 +40,7 @@ la expectativa de los propios analistas?
    cambia.
 5. **A 12 meses, la encuesta de expectativas del BCRP le gana a todos los modelos** (1,41 pp de
    error frente a 1,47 del SARIMA).
-6. **La incertidumbre depende del régimen.** Los intervalos de 80 % cubrieron 75–85 % de los casos a
+6. **La incertidumbre depende del régimen.** Los intervalos de 80 % cubrieron 75–87 % de los casos a
    1–6 meses en 2013–2019, pero se quedaron cortos en la pandemia y en el choque de 2022, cuando
    ningún modelo anticipó una inflación de 8,81 %. Por eso el pronóstico vigente usa intervalos
    anchos, construidos con todos los errores del pasado.

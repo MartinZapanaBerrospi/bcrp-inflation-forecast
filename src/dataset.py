@@ -90,7 +90,7 @@ def main() -> None:
     panel = build_panel()
     report = checks(panel)
     config.REPORTS.mkdir(exist_ok=True)
-    report.to_csv(config.REPORTS / "calidad_datos.csv", index=False)
+    report.to_csv(config.REPORTS / "calidad_datos.csv", index=False, lineterminator="\n")
     with pd.option_context("display.width", 200, "display.max_colwidth", 100):
         print(report.to_string(index=False))
     if not report["cumple"].all():
@@ -102,7 +102,8 @@ def main() -> None:
     config.PROCESSED.mkdir(parents=True, exist_ok=True)
     out = panel.copy()
     out.index = out.index.astype(str)
-    out.to_csv(config.PROCESSED / "panel.csv", float_format="%.6f")
+    # LF explícito: el archivo debe ser idéntico se genere en Windows o en Linux
+    out.to_csv(config.PROCESSED / "panel.csv", float_format="%.6f", lineterminator="\n")
     print(f"panel: {len(out)} meses, {out.index[0]} → {out.index[-1]}")
 
 

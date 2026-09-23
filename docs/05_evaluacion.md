@@ -28,7 +28,7 @@ Error absoluto medio en pp. En negrita, el menor de cada fila.
 |---|---|---|---|---|---|---|---|
 | 1 mes | 0,29 | 0,25 | 0,22 | 0,22 | 0,23 | **0,21** | — |
 | 3 meses | 0,60 | 0,59 | 0,51 | 0,52 | 0,53 | **0,49** | — |
-| 6 meses | 0,97 | 1,01 | **0,88** | 0,98 | 1,00 | **0,88** | — |
+| 6 meses | 0,97 | 1,01 | **0,88** | 0,98 | 1,00 | 0,89 | — |
 | 9 meses | 1,33 | 1,36 | **1,18** | 1,46 | 1,51 | 1,21 | — |
 | 12 meses | 1,64 | 1,71 | 1,47 | 2,26 | 1,71 | 1,63 | **1,41** |
 | **Promedio 1–12** | 1,01 | 1,03 | **0,90** | 1,11 | 1,07 | 0,92 | — |
@@ -91,7 +91,7 @@ Porcentaje de meses en que el dato real cayó dentro del intervalo.
 
 | Modelo | 80 % a 1 mes | 80 % a 6 meses | 80 % a 12 meses | 95 % a 12 meses |
 |---|---|---|---|---|
-| SARIMA | 73 % | 60 % | 48 % | 66 % |
+| SARIMA | 74 % | 60 % | 48 % | 66 % |
 | Ensamble | 73 % | 63 % | 53 % | 74 % |
 | Ridge | 78 % | 72 % | 56 % | 68 % |
 
@@ -100,9 +100,9 @@ cambio de régimen:
 
 | SARIMA, intervalo 80 % | 1 mes | 3 meses | 6 meses | 12 meses |
 |---|---|---|---|---|
-| Estable (2013–2019) | 85 % | 79 % | 75 % | 63 % |
+| Estable (2013–2019) | 87 % | 79 % | 75 % | 63 % |
 | Pandemia (2020–2021) | 38 % | 58 % | 54 % | 25 % |
-| Choque (2022–2023) | 71 % | 42 % | 54 % | 46 % |
+| Choque (2022–2023) | 71 % | 42 % | 50 % | 46 % |
 | Reciente (2024–2026) | 81 % | 59 % | 42 % | 40 % |
 
 En la etapa estable, los intervalos a 1–6 meses funcionan casi como deben. Cuando llegan la
@@ -118,7 +118,7 @@ SARIMA, el modelo con menor error promedio:
 | Mes | Pronóstico | Intervalo 80 % | Prob. en rango meta | Inflación "asegurada" por meses observados |
 |---|---|---|---|---|
 | Set 2026 | 4,51 % | 4,15 – 4,88 % | 0 % | 4,43 % |
-| Dic 2026 | 4,78 % | 4,07 – 5,99 % | 1 % | 4,16 % |
+| Dic 2026 | 4,78 % | 4,06 – 5,98 % | 1 % | 4,16 % |
 | Feb 2027 | 4,46 % | 3,37 – 6,44 % | 3 % | 3,34 % |
 | **Mar 2027** | **3,00 %** | 1,88 – 5,01 % | 54 % | **0,94 %** |
 | Abr 2027 | 2,74 % | 1,50 – 5,20 % | 60 % | 0,42 % |

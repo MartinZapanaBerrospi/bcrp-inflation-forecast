@@ -1,0 +1,4 @@
+# Todo el texto del repositorio en LF, se genere en Windows o en Linux
+* text=auto eol=lf
+*.png binary
+*.json text eol=lf
