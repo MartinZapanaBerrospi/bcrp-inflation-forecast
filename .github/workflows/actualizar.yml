@@ -33,10 +33,14 @@ jobs:
         run: python -m src.dataset
       - name: ¿Hay un mes nuevo?
         id: nuevo
+        # Compara el último mes descargado con el último mes publicado en la app
         run: |
-          if git diff --quiet -- data/processed/panel.csv; then
+          DESCARGADO=$(python -c "import pandas as pd; print(pd.read_csv('data/processed/panel.csv')['periodo'].iloc[-1])")
+          PUBLICADO=$(python -c "import json; print(json.load(open('data/processed/resumen.json'))['ultimo_mes'])")
+          echo "Descargado: $DESCARGADO · publicado: $PUBLICADO"
+          if [ "$DESCARGADO" = "$PUBLICADO" ]; then
             echo "hay=false" >> "$GITHUB_OUTPUT"
-            echo "Sin datos nuevos: no se reentrena."
+            echo "Sin mes nuevo: no se reentrena."
           else
             echo "hay=true" >> "$GITHUB_OUTPUT"
           fi

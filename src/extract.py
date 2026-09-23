@@ -55,7 +55,7 @@ def main() -> None:
         print(f"  {code} {name:20s} {len(periods)} meses, {periods[0]['name']} → {periods[-1]['name']}")
         time.sleep(0.3)
     with (config.RAW / "manifest.csv").open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=FIELDS)
+        writer = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 

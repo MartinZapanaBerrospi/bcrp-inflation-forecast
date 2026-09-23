@@ -43,8 +43,9 @@ def run() -> pd.DataFrame:
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     preds = run()
-    preds.to_csv(OUT / "predicciones.csv", index=False, float_format="%.6f")
-    (OUT / "sarima_sin_convergencia.txt").write_text("\n".join(SARIMA_FALLBACKS) + "\n", encoding="utf-8")
+    preds.to_csv(OUT / "predicciones.csv", index=False, float_format="%.6f", lineterminator="\n")
+    (OUT / "sarima_sin_convergencia.txt").write_text("\n".join(SARIMA_FALLBACKS) + "\n", encoding="utf-8",
+                                                     newline="\n")
     print(f"{len(preds)} filas en {OUT.relative_to(config.ROOT)}; SARIMA sin convergencia en "
           f"{len(SARIMA_FALLBACKS)} orígenes: {SARIMA_FALLBACKS}")
 
