@@ -1,0 +1,59 @@
+name: Actualizar datos y pronóstico
+
+# El BCRP publica el IPC de Lima en los primeros días de cada mes. El día 10 ya está disponible:
+# se descargan las series, se vuelve a correr el backtest y se publica el pronóstico nuevo.
+# Streamlit Community Cloud redespliega la app al detectar el commit.
+on:
+  schedule:
+    - cron: "0 14 10 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-pipeline.txt
+      - run: pip install -r requirements-pipeline.txt
+      - name: Descargar series del BCRP
+        run: python -m src.extract
+      - name: Validar y construir el panel
+        run: python -m src.dataset
+      - name: ¿Hay un mes nuevo?
+        id: nuevo
+        run: |
+          if git diff --quiet -- data/processed/panel.csv; then
+            echo "hay=false" >> "$GITHUB_OUTPUT"
+            echo "Sin datos nuevos: no se reentrena."
+          else
+            echo "hay=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Backtest y evaluación
+        if: steps.nuevo.outputs.hay == 'true'
+        run: |
+          python -m src.backtest
+          python -m src.evaluate
+      - name: Pruebas antes de publicar
+        if: steps.nuevo.outputs.hay == 'true'
+        run: pytest -q
+      - name: Publicar
+        if: steps.nuevo.outputs.hay == 'true'
+        run: |
+          MES=$(python -c "import json; print(json.load(open('data/processed/resumen.json'))['ultimo_mes'])")
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data reports
+          git commit -m "datos: actualizar al IPC de $MES"
+          git push
