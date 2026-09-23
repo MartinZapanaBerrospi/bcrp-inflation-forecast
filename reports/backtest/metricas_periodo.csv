@@ -1,8 +1,8 @@
 periodo,modelo,h,n,mae
 Estable (2013–2019),encuesta,12,84,0.72779
-Estable (2013–2019),ensamble,3,84,0.37042
-Estable (2013–2019),ensamble,6,84,0.65789
-Estable (2013–2019),ensamble,12,84,1.15444
+Estable (2013–2019),ensamble,3,84,0.37116
+Estable (2013–2019),ensamble,6,84,0.65883
+Estable (2013–2019),ensamble,12,84,1.15496
 Estable (2013–2019),estacional,3,84,0.36718
 Estable (2013–2019),estacional,6,84,0.54719
 Estable (2013–2019),estacional,12,84,0.83015
@@ -15,13 +15,13 @@ Estable (2013–2019),ingenuo,12,84,0.84587
 Estable (2013–2019),ridge,3,84,0.42473
 Estable (2013–2019),ridge,6,84,0.87077
 Estable (2013–2019),ridge,12,84,1.56362
-Estable (2013–2019),sarima,3,84,0.34569
-Estable (2013–2019),sarima,6,84,0.52671
-Estable (2013–2019),sarima,12,84,0.80123
+Estable (2013–2019),sarima,3,84,0.34702
+Estable (2013–2019),sarima,6,84,0.52781
+Estable (2013–2019),sarima,12,84,0.80197
 Pandemia (2020–2021),encuesta,12,24,3.64742
-Pandemia (2020–2021),ensamble,3,24,0.54072
-Pandemia (2020–2021),ensamble,6,24,1.26415
-Pandemia (2020–2021),ensamble,12,24,3.69046
+Pandemia (2020–2021),ensamble,3,24,0.54080
+Pandemia (2020–2021),ensamble,6,24,1.26386
+Pandemia (2020–2021),ensamble,12,24,3.69051
 Pandemia (2020–2021),estacional,3,24,0.67516
 Pandemia (2020–2021),estacional,6,24,1.47381
 Pandemia (2020–2021),estacional,12,24,3.56903
@@ -34,13 +34,13 @@ Pandemia (2020–2021),ingenuo,12,24,3.01865
 Pandemia (2020–2021),ridge,3,24,0.59559
 Pandemia (2020–2021),ridge,6,24,1.28782
 Pandemia (2020–2021),ridge,12,24,4.31066
-Pandemia (2020–2021),sarima,3,24,0.60106
-Pandemia (2020–2021),sarima,6,24,1.25972
-Pandemia (2020–2021),sarima,12,24,3.18276
+Pandemia (2020–2021),sarima,3,24,0.60073
+Pandemia (2020–2021),sarima,6,24,1.25915
+Pandemia (2020–2021),sarima,12,24,3.18263
 Choque inflacionario (2022–2023),encuesta,12,24,1.75276
-Choque inflacionario (2022–2023),ensamble,3,24,0.73290
-Choque inflacionario (2022–2023),ensamble,6,24,1.20718
-Choque inflacionario (2022–2023),ensamble,12,24,1.82552
+Choque inflacionario (2022–2023),ensamble,3,24,0.73287
+Choque inflacionario (2022–2023),ensamble,6,24,1.20699
+Choque inflacionario (2022–2023),ensamble,12,24,1.82506
 Choque inflacionario (2022–2023),estacional,3,24,1.07988
 Choque inflacionario (2022–2023),estacional,6,24,1.74816
 Choque inflacionario (2022–2023),estacional,12,24,2.58546
@@ -53,12 +53,12 @@ Choque inflacionario (2022–2023),ingenuo,12,24,3.34272
 Choque inflacionario (2022–2023),ridge,3,24,0.62878
 Choque inflacionario (2022–2023),ridge,6,24,1.01536
 Choque inflacionario (2022–2023),ridge,12,24,2.70857
-Choque inflacionario (2022–2023),sarima,3,24,0.88029
-Choque inflacionario (2022–2023),sarima,6,24,1.48389
-Choque inflacionario (2022–2023),sarima,12,24,2.07536
+Choque inflacionario (2022–2023),sarima,3,24,0.88003
+Choque inflacionario (2022–2023),sarima,6,24,1.48367
+Choque inflacionario (2022–2023),sarima,12,24,2.07680
 Reciente (2024–2026),encuesta,12,20,1.18534
-Reciente (2024–2026),ensamble,3,29,0.58410
-Reciente (2024–2026),ensamble,6,26,0.96927
+Reciente (2024–2026),ensamble,3,29,0.58406
+Reciente (2024–2026),ensamble,6,26,0.96921
 Reciente (2024–2026),ensamble,12,20,0.88987
 Reciente (2024–2026),estacional,3,29,0.78279
 Reciente (2024–2026),estacional,6,26,1.38436
@@ -72,6 +72,6 @@ Reciente (2024–2026),ingenuo,12,20,1.31286
 Reciente (2024–2026),ridge,3,29,0.64651
 Reciente (2024–2026),ridge,6,26,1.03233
 Reciente (2024–2026),ridge,12,20,2.15199
-Reciente (2024–2026),sarima,3,29,0.59797
-Reciente (2024–2026),sarima,6,26,1.10574
-Reciente (2024–2026),sarima,12,20,1.47609
+Reciente (2024–2026),sarima,3,29,0.59807
+Reciente (2024–2026),sarima,6,26,1.10551
+Reciente (2024–2026),sarima,12,20,1.47594

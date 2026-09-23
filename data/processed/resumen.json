@@ -6,13 +6,13 @@
   "tasa_referencia": 4.25,
   "mejor_modelo": "sarima",
   "mae_promedio": {
-    "sarima": 0.8964305425854809,
-    "ensamble": 0.9180113029945894,
+    "sarima": 0.8969505868905406,
+    "ensamble": 0.9183144985524226,
     "gbm": 1.0676559156805439,
     "ridge": 1.1072662393625414
   },
   "retorno_al_rango": "2027-04",
-  "pronostico_12m": 3.262226,
+  "pronostico_12m": 3.262229,
   "prob_en_rango_12m": 0.4276315789473684,
   "ridge_base_12m": 3.1308671681109486,
   "ridge_alpha_12m": 28.072162039411786
