@@ -56,22 +56,22 @@ Choque inflacionario (2022–2023),ridge,12,24,2.70857
 Choque inflacionario (2022–2023),sarima,3,24,0.88003
 Choque inflacionario (2022–2023),sarima,6,24,1.48367
 Choque inflacionario (2022–2023),sarima,12,24,2.07680
-Reciente (2024–2026),encuesta,12,20,1.18534
-Reciente (2024–2026),ensamble,3,29,0.58406
-Reciente (2024–2026),ensamble,6,26,0.96921
-Reciente (2024–2026),ensamble,12,20,0.88987
-Reciente (2024–2026),estacional,3,29,0.78279
-Reciente (2024–2026),estacional,6,26,1.38436
-Reciente (2024–2026),estacional,12,20,2.11740
-Reciente (2024–2026),gbm,3,29,0.74387
-Reciente (2024–2026),gbm,6,26,1.19050
-Reciente (2024–2026),gbm,12,20,1.07004
-Reciente (2024–2026),ingenuo,3,29,0.56842
-Reciente (2024–2026),ingenuo,6,26,0.93239
-Reciente (2024–2026),ingenuo,12,20,1.31286
-Reciente (2024–2026),ridge,3,29,0.64651
-Reciente (2024–2026),ridge,6,26,1.03233
-Reciente (2024–2026),ridge,12,20,2.15199
-Reciente (2024–2026),sarima,3,29,0.59807
-Reciente (2024–2026),sarima,6,26,1.10551
-Reciente (2024–2026),sarima,12,20,1.47594
+Reciente (2024–2026),encuesta,12,21,1.24252
+Reciente (2024–2026),ensamble,3,30,0.58008
+Reciente (2024–2026),ensamble,6,27,0.96521
+Reciente (2024–2026),ensamble,12,21,0.99150
+Reciente (2024–2026),estacional,3,30,0.77888
+Reciente (2024–2026),estacional,6,27,1.36836
+Reciente (2024–2026),estacional,12,21,2.02580
+Reciente (2024–2026),gbm,3,30,0.72791
+Reciente (2024–2026),gbm,6,27,1.15058
+Reciente (2024–2026),gbm,12,21,1.11559
+Reciente (2024–2026),ingenuo,3,30,0.56747
+Reciente (2024–2026),ingenuo,6,27,0.92542
+Reciente (2024–2026),ingenuo,12,21,1.40226
+Reciente (2024–2026),ridge,3,30,0.64401
+Reciente (2024–2026),ridge,6,27,1.00698
+Reciente (2024–2026),ridge,12,21,2.26773
+Reciente (2024–2026),sarima,3,30,0.59007
+Reciente (2024–2026),sarima,6,27,1.11548
+Reciente (2024–2026),sarima,12,21,1.47545
